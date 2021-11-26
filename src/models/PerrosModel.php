@@ -70,5 +70,11 @@ class PerrosModel {
         return $perros;
     }
 
-    
+    function converAsocToObj(array $asocs) {
+        $objs = [];
+        foreach ($asocs as $asoc) {
+            $objs[] = new Perro($asoc);
+        }
+        return $objs;
+    }
 }
